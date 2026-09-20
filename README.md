@@ -6,9 +6,9 @@ The project provides a clean and interactive social media experience where users
 
 ## 🚀 Live Demo
 
-🔗 Live Demo: https://YOUR-USERNAME.github.io/connectly-social-network/
+🔗 Live Demo: https://sz6416328-sketch.github.io/connectly-social-network/
 
-> Replace `YOUR-USERNAME` with your GitHub username.
+> Replace Saira Zafar with your GitHub username.
 
 ---
 
