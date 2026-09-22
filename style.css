@@ -2033,3 +2033,1238 @@ body {
 /* =====================================
    TOAST
 ================
+/* =========================================================
+   CONNECTLY - FINAL UI ENHANCEMENTS
+   IMPORTANT:
+   Paste this code at the VERY END of style.css.
+   Do NOT delete or replace your existing CSS.
+========================================================= */
+
+
+/* =========================================================
+   SMOOTH GLOBAL INTERACTIONS
+========================================================= */
+
+button,
+a,
+.story,
+.suggestion,
+.post-action,
+.post-option,
+.widget,
+.user-card,
+.stories-card,
+.create-post-card,
+.post {
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+button:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   BETTER BODY BACKGROUND
+========================================================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(99,102,241,0.06),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(139,92,246,0.05),
+            transparent 25%
+        ),
+        var(--background);
+}
+
+
+/* =========================================================
+   HEADER IMPROVEMENT
+========================================================= */
+
+.topbar {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+.logo {
+    cursor: pointer;
+}
+
+
+.logo-icon {
+    box-shadow:
+        0 8px 20px rgba(99,102,241,0.25);
+}
+
+
+.search-box {
+    transition: 0.2s ease;
+}
+
+
+.search-box:focus-within {
+    border-color: rgba(99,102,241,0.35);
+    box-shadow:
+        0 0 0 4px rgba(99,102,241,0.08);
+}
+
+
+/* =========================================================
+   ICON BUTTONS
+========================================================= */
+
+.icon-btn:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 8px 18px rgba(99,102,241,0.12);
+}
+
+
+.profile-mini img {
+    transition: 0.25s ease;
+}
+
+
+.profile-mini:hover img {
+    transform: scale(1.05);
+    box-shadow:
+        0 8px 20px rgba(99,102,241,0.18);
+}
+
+
+/* =========================================================
+   SIDEBAR CARDS
+========================================================= */
+
+.user-card:hover,
+.stories-card:hover,
+.create-post-card:hover,
+.widget:hover {
+    box-shadow:
+        0 16px 40px rgba(15,23,42,0.09);
+}
+
+
+.profile-large {
+    transition: 0.25s ease;
+}
+
+
+.user-card:hover .profile-large {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   SIDE NAV
+========================================================= */
+
+.side-nav a {
+    transition: all 0.2s ease;
+}
+
+
+.side-nav a:hover {
+    transform: translateX(3px);
+}
+
+
+.side-nav a.active {
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   UPGRADE CARD
+========================================================= */
+
+.upgrade-card {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.upgrade-card::after {
+    content: "";
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.08);
+
+    right: -50px;
+    top: -50px;
+}
+
+
+.upgrade-card button {
+    position: relative;
+    z-index: 2;
+}
+
+
+.upgrade-card button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.12);
+}
+
+
+/* =========================================================
+   STORIES
+========================================================= */
+
+.story {
+    cursor: pointer;
+}
+
+
+.story:hover {
+    transform: translateY(-4px);
+}
+
+
+.story img {
+    transition: 0.25s ease;
+}
+
+
+.story:hover img {
+    transform: scale(1.05);
+}
+
+
+.story-ring {
+    transition: 0.25s ease;
+}
+
+
+.story:hover .story-ring {
+    border-color: #8b5cf6;
+}
+
+
+.create-story:hover .story-plus {
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   CREATE POST
+========================================================= */
+
+.create-top textarea {
+    transition: 0.2s ease;
+}
+
+
+.create-top textarea:focus {
+    background: var(--card);
+
+    box-shadow:
+        0 0 0 3px rgba(99,102,241,0.08);
+
+    border: 1px solid rgba(99,102,241,0.2);
+}
+
+
+.post-submit {
+    min-width: 80px;
+}
+
+
+.post-submit:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(99,102,241,0.25);
+}
+
+
+/* =========================================================
+   MEDIA PREVIEW
+========================================================= */
+
+.media-preview {
+    padding: 8px;
+    border-radius: 14px;
+    background: var(--background);
+}
+
+
+.media-preview img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   POSTS
+========================================================= */
+
+.post {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.post:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 16px 35px rgba(15,23,42,0.09);
+}
+
+
+.post-author-img {
+    transition: 0.2s ease;
+}
+
+
+.post-author-img:hover {
+    transform: scale(1.06);
+}
+
+
+.post-text {
+    white-space: normal;
+}
+
+
+.post-image {
+    transition: 0.3s ease;
+}
+
+
+.post:hover .post-image {
+    transform: scale(1.005);
+}
+
+
+/* =========================================================
+   POST ACTIONS
+========================================================= */
+
+.post-action {
+    font-weight: 500;
+}
+
+
+.post-action:hover {
+    transform: translateY(-1px);
+}
+
+
+.post-action.liked {
+    font-weight: 700;
+}
+
+
+.post-action.liked i {
+    animation: likePop 0.25s ease;
+}
+
+
+@keyframes likePop {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   COMMENTS
+========================================================= */
+
+.comment-body {
+    max-width: 85%;
+    line-height: 1.5;
+}
+
+
+.comment-input input:focus {
+    box-shadow:
+        0 0 0 3px rgba(99,102,241,0.08);
+}
+
+
+/* =========================================================
+   FRIEND REQUEST BUTTON
+========================================================= */
+
+.add-friend:hover {
+    transform: translateY(-2px);
+}
+
+
+.add-friend.sent {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TRENDING
+========================================================= */
+
+.trend {
+    cursor: pointer;
+}
+
+
+.trend:hover {
+    padding-left: 5px;
+}
+
+
+.trend strong {
+    color: var(--text);
+}
+
+
+.trend:hover strong {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   ONLINE FRIENDS
+========================================================= */
+
+.online-user {
+    cursor: pointer;
+}
+
+
+.online-user:hover {
+    transform: translateY(-3px);
+}
+
+
+.online-user strong {
+    transition: 0.2s ease;
+}
+
+
+.online-user:hover strong {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   NOTIFICATION PANEL
+========================================================= */
+
+.notification-item {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+.notification-item:hover {
+    background: var(--background);
+}
+
+
+.notification-count {
+    box-shadow:
+        0 3px 8px rgba(239,68,68,0.25);
+}
+
+
+/* =========================================================
+   MODAL IMPROVEMENT
+========================================================= */
+
+.modal-overlay {
+    animation: overlayFade 0.2s ease;
+}
+
+
+@keyframes overlayFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+.modal {
+    animation: modalOpen 0.25s ease;
+}
+
+
+@keyframes modalOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+.edit-profile:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(99,102,241,0.25);
+}
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+.setting-row {
+    transition: 0.2s ease;
+}
+
+
+.setting-row:hover {
+    padding-left: 5px;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast {
+    z-index: 9999;
+
+    box-shadow:
+        0 15px 35px rgba(15,23,42,0.15);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================================================
+   DARK MODE
+   Your JavaScript already adds body.dark.
+========================================================= */
+
+body.dark {
+
+    --background: #0b1120;
+
+    --card: #111827;
+
+    --text: #f3f4f6;
+
+    --muted: #9ca3af;
+
+    --border: #243047;
+
+    --shadow:
+        0 12px 30px rgba(0,0,0,0.25);
+
+}
+
+
+body.dark .topbar {
+    background: rgba(17,24,39,0.94);
+}
+
+
+body.dark .search-box {
+    background: #182235;
+}
+
+
+body.dark .search-box input {
+    color: var(--text);
+}
+
+
+body.dark .icon-btn {
+    background: #182235;
+    color: var(--text);
+}
+
+
+body.dark .icon-btn:hover {
+    background: #222d43;
+}
+
+
+body.dark .side-nav a:hover,
+body.dark .side-nav a.active {
+    background: #1d2740;
+}
+
+
+body.dark .view-profile-btn {
+    background: #1d2740;
+}
+
+
+body.dark .view-profile-btn:hover {
+    background: #263250;
+}
+
+
+body.dark .story img {
+    border-color: var(--card);
+}
+
+
+body.dark .story-plus {
+    border-color: var(--card);
+}
+
+
+body.dark .create-top textarea {
+    background: #182235;
+}
+
+
+body.dark .create-top textarea:focus {
+    background: #111827;
+}
+
+
+body.dark .post-action:hover {
+    background: #182235;
+}
+
+
+body.dark .comment-body {
+    background: #182235;
+}
+
+
+body.dark .comment-input input {
+    background: #182235;
+}
+
+
+body.dark .feed-header select {
+    background: var(--card);
+}
+
+
+body.dark .add-friend {
+    background: #1d2740;
+}
+
+
+body.dark .notification-panel {
+    background: var(--card);
+}
+
+
+body.dark .modal {
+    background: var(--card);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .layout {
+        grid-template-columns:
+            220px
+            minmax(400px, 1fr);
+
+        gap: 18px;
+    }
+
+
+    .right-sidebar {
+        display: none;
+    }
+
+
+    .search-box {
+        width: 300px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .layout {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+
+    .left-sidebar {
+        position: static;
+    }
+
+
+    .user-card {
+        display: grid;
+
+        grid-template-columns:
+            auto 1fr;
+
+        text-align: left;
+
+        align-items: center;
+
+        column-gap: 15px;
+    }
+
+
+    .profile-large {
+        grid-row: span 3;
+    }
+
+
+    .profile-stats {
+        grid-column: 2;
+    }
+
+
+    .view-profile-btn {
+        grid-column: 2;
+    }
+
+
+    .side-nav {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 4px;
+    }
+
+
+    .side-nav a {
+        justify-content: center;
+    }
+
+
+    .nav-badge {
+        display: none;
+    }
+
+
+    .upgrade-card {
+        display: none;
+    }
+
+
+    .topbar {
+        padding: 0 18px;
+    }
+
+
+    .search-box {
+        width: 280px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .topbar {
+        height: auto;
+
+        min-height: 65px;
+
+        padding: 10px 14px;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+
+    .logo {
+        font-size: 18px;
+    }
+
+
+    .logo-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    .search-box {
+        order: 3;
+
+        width: 100%;
+    }
+
+
+    .header-actions {
+        margin-left: auto;
+    }
+
+
+    .layout {
+        padding: 12px;
+    }
+
+
+    .user-card {
+        display: block;
+        text-align: center;
+    }
+
+
+    .profile-stats {
+        display: grid;
+    }
+
+
+    .view-profile-btn {
+        display: block;
+    }
+
+
+    .side-nav {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .side-nav a {
+        justify-content: flex-start;
+    }
+
+
+    .stories-card,
+    .create-post-card,
+    .post,
+    .widget {
+        border-radius: 16px;
+    }
+
+
+    .stories-card {
+        padding: 15px;
+    }
+
+
+    .create-post-card {
+        padding: 15px;
+    }
+
+
+    .post {
+        padding: 15px;
+    }
+
+
+    .post-options {
+        flex-wrap: wrap;
+    }
+
+
+    .post-submit {
+        margin-left: auto;
+    }
+
+
+    .notification-panel {
+        top: 72px;
+
+        left: 12px;
+
+        right: 12px;
+
+        width: auto;
+    }
+
+
+    .modal {
+        max-width: 100%;
+    }
+
+
+    .settings-modal {
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .header-actions {
+        gap: 5px;
+    }
+
+
+    .icon-btn {
+        width: 37px;
+        height: 37px;
+    }
+
+
+    .profile-mini img {
+        width: 37px;
+        height: 37px;
+    }
+
+
+    .side-nav {
+        grid-template-columns: 1fr;
+    }
+
+
+    .post-actions {
+        gap: 2px;
+    }
+
+
+    .post-action {
+        padding: 8px 4px;
+        font-size: 11px;
+    }
+
+
+    .post-option {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY / FOCUS
+========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(99,102,241,0.25);
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #c7c9d9;
+    border-radius: 20px;
+}
+
+
+body.dark ::-webkit-scrollbar-thumb {
+    background: #374151;
+}
+/* =====================================================
+   CONNECTLY SIDEBAR FEATURE PANELS
+===================================================== */
+
+.connectly-panel {
+    width: min(600px, 92%);
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.connectly-panel-content {
+    margin-top: 20px;
+}
+
+
+/* Friends */
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 14px;
+    background: var(--card-bg, #f7f8fa);
+}
+
+.feature-item img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feature-item > div {
+    flex: 1;
+}
+
+.feature-item strong {
+    display: block;
+}
+
+.feature-item small {
+    display: block;
+    margin-top: 4px;
+    opacity: 0.65;
+}
+
+.feature-btn {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 9px;
+    cursor: pointer;
+    background: #e8ebf0;
+}
+
+
+/* Messages */
+
+.messages-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.message-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px;
+    border-radius: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.message-user:hover {
+    background: var(--card-bg, #f4f5f7);
+}
+
+.message-user img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.message-user div {
+    flex: 1;
+}
+
+.message-user strong,
+.message-user small {
+    display: block;
+}
+
+.message-user small {
+    margin-top: 4px;
+    opacity: 0.65;
+}
+
+.message-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #22c55e;
+}
+
+
+/* Chat */
+
+.chat-messages {
+    min-height: 250px;
+    max-height: 350px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-message {
+    width: fit-content;
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+}
+
+.chat-message.received {
+    background: #eef0f4;
+}
+
+.chat-message.sent {
+    margin-left: auto;
+    background: #4f46e5;
+    color: white;
+}
+
+.chat-input-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.chat-input-row input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.chat-input-row button {
+    width: 45px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #4f46e5;
+    color: white;
+}
+
+
+/* Explore */
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.explore-card {
+    padding: 25px 15px;
+    border-radius: 16px;
+    text-align: center;
+    background: var(--card-bg, #f7f8fa);
+}
+
+.explore-card i {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.explore-card h3 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.explore-card p {
+    opacity: 0.6;
+    font-size: 13px;
+}
+
+
+/* Saved Posts */
+
+.saved-post-item {
+    padding: 15px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    background: var(--card-bg, #f7f8fa);
+}
+
+.saved-post-item p {
+    margin: 8px 0;
+}
+
+.saved-post-item small {
+    opacity: 0.6;
+}
+
+
+/* Empty */
+
+.empty-feature {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.empty-feature i {
+    font-size: 45px;
+    opacity: 0.4;
+    margin-bottom: 15px;
+}
+
+.empty-feature h3 {
+    margin-bottom: 8px;
+}
+
+.empty-feature p {
+    opacity: 0.6;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .connectly-panel {
+        width: 94%;
+    }
+
+}
